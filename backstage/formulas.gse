@@ -1,0 +1,11 @@
+=IF(LEFT(H4)<>"h", "*("&H4&"#"&G4&") "&A4, H4*". "&A4)
+
+
+//turn into textile bullet or headline
+=IF(LEFT(H4:H)<>"h", 
+  "*("&H4:H&"#"&G4:G&") ", 
+  H4:H&"(#"&G4:G&"). ")&A4:A
+
+=ArrayFormula(IF(LEFT(H4:H)<>"h", 
+  "*("&H4:H&"#"&G4:G&") ", 
+  H4:H&"(#"&G4:G&"). ")&A4:A&"\n")

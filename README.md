@@ -28,7 +28,7 @@ Why [Textile](https://textile-lang.com/) instead of the far more well known Mark
 ---
 
 ## About the paper
-The paper was published 24 March 2022. It is *dense*: it has 11 (very composite) figures, some 148 paragraphs across 33 double-columned PDF pages, and lists 389 references.
+The TAME paper was published 24 March 2022 in *Frontiers*. It is ***dense***: it has 11 (very composite) figures, some 148 paragraphs across 33 double-columned PDF pages, and lists 389 references.
 
 The paper was released under a [CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). So is this reader.
 
@@ -41,3 +41,5 @@ Find Michael Levin<sup>[WP](https://en.wikipedia.org/wiki/Michael_Levin_(biologi
 Podcasts are a great intro to the paper & to Levin too. My favorite Levin intereview is Oshan Jarrow's [Scaling Selfhood: Collective Intelligence from Cells to Economies](https://www.musingmind.org/podcasts/collective-intelligence-cells-economies-cosmos-michael-levin)
 
 Check out also the excellent essay [*Cognition all the way down*](https://aeon.co/essays/how-to-understand-cells-tissues-and-organisms-as-agents-with-agendas) by Michael Levin & Daniel Dennett<sup>[WP](https://en.wikipedia.org/wiki/Daniel_Dennett)</p> published at Aeon in 13 October 2020.
+
+Finally, check out some [beautiful free verse](https://thoughtforms.life/some-free-verse-on-the-topic-of-diverse-intelligence/) grounded in TAME that Levin wrote recently (March 23, 2024).

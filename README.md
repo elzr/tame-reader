@@ -10,7 +10,7 @@ This is a paper as dense as it is fascinating. But I got so frustrated trying to
 This is the embodiment of a reading processor I've been dreaming about thanks to [Doug Engelbart](https://en.wikipedia.org/wiki/Douglas_Engelbart) since [2006](https://twitter.com/elzr/status/1372391789332725763).
 
 ### Source
-I've tried hard **not to change** the content of the paper at all, seeking only to present it in a more useful way. All my edits happen in public in this Github and the reader itself runs from this repo as a [Github Page](https://docs.github.com/en/pages). If you find an accidental edit, please submit an issue.
+I've tried hard **not to change** the content of the paper at all, seeking only to present it in a more useful way. This representation involves a lot of marking up. All my edits happen in public in this Github and the reader itself runs from this repo as a [Github Page](https://docs.github.com/en/pages). If you find an accidental edit, please submit an issue.
 
 The content was extracted from [the **HTML** served](https://www.frontiersin.org/articles/10.3389/fnsys.2022.768201/full) at *Frontiers*. That canonical source is stored here in this repo at `/backstage/base-html-paper`.
 
@@ -19,11 +19,14 @@ That text & images got then wrangled & massaged through the Ruby scripts in this
 The **figures** were broken down & given some margins in [this Figma](https://www.figma.com/file/hfDDFL6Gs4wAGEY0TbPe2i/TAME-Michael-Levin?type=design&node-id=0%3A1&mode=design&t=9JhOQ0HKyAFzlbJo-1).
 
 ### Assembly
-The core document after all the wrangling is `tame.textile` where all the text (headlines, paragraphs, captions, and even tables) is brought together under lightweight markup. Paragraps are written down as bulleted lists to breakdown sentences. Readers will later be able to toggle between expanded & collapsed views of each paragraph but I wanted to pre-parse the text & have the HTML be well structured prior to any CSS & JS.
+The core document after all the wrangling is `tame.textile` where all the final text (headlines, paragraphs, captions, and even tables) lives. Paragraps are written down as bulleted lists to break down their sentences. Readers will later be able to toggle between expanded & collapsed views of each paragraph but I wanted to pre-parse the text & have the HTML be well structured prior to any CSS & JS.
 
-Why [Textile](https://textile-lang.com/) instead of the far more well known Markdown? Because I love how Textile handles [`(class#id)` attributes](https://textile-lang.com/doc/classes-and-ids) of which there are plenty. I wanted a light markup that's still more expressive than Markdown, which [requires HTML kludges for this](https://stackoverflow.com/questions/3292903/in-markdown-what-is-the-best-way-to-link-to-a-fragment-of-a-page-i-e-some-id).
+`tame.textile` then gets converted by `build.rb` into `index.html`, which is what gets served via Github Pages at http://elzr.github.io/tame-reader
 
-`tame.textile` then gets converted by `build.rb` into `_by_sentence_tame.textile` and that eventually becomes `index.html`, which is what gets served via Github Pages at http://elzr.github.io/tame-reader
+### Why Textile?
+Why [Textile](https://textile-lang.com/) instead of the far, far more well known Markdown? Because I love how Textile handles [`(class#id)` attributes](https://textile-lang.com/doc/classes-and-ids) of which there are plenty. I wanted a light markup that's still more expressive than Markdown, which [requires HTML kludges for this](https://stackoverflow.com/questions/3292903/in-markdown-what-is-the-best-way-to-link-to-a-fragment-of-a-page-i-e-some-id).
+
+Specifically, I'm using [textile.js](https://github.com/borgar/textile-js) because [RedCloth](https://github.com/jgarber/redcloth/tree/master), the Ruby Textile library, sadly does not parse [`(class#id)` attributes](https://textile-lang.com/doc/classes-and-ids) according to spec.
 
 ---
 

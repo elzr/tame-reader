@@ -1,19 +1,18 @@
-# expects to work with para.textile
-if ARGV.length != 1
-  puts "Please specify <filename>"
-  exit
-end
-filename = ARGV[0]
-
-# Create a new file name for the output
-output_filename = "by_sentence_#{filename}"
+# expects to work with tame.textile
+to_split = ARGV[0]
+output_filename = ARGV[1]
 
 # Open the original file for reading and the new file for writing
-File.open(filename, 'r') do |file|
+File.open(to_split, 'r') do |file|
   File.open(output_filename, 'w') do |output_file|
     file.each_line do |line|
       paraId = ''
       sentenceCount = 1
+
+      # ignore table lines since they're already parsed
+      if line =~ /#table-/
+        next
+      end
 
       # tweak first class#id attribute to apply to the container itself
       # see https://textile-lang.com/doc/bulleted-unordered-lists
@@ -36,4 +35,4 @@ File.open(filename, 'r') do |file|
   end
 end
 
-puts "Done! #{filename}'s paragraphs broken by sentence in #{output_filename}."
+puts "Done! #{to_split}'s paragraphs broken by sentence in #{output_filename}."

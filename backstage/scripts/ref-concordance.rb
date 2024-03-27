@@ -1,20 +1,13 @@
-# expects to work with by_sentence_para.textile
-if ARGV.length != 1
-  puts "Please specify <filename>"
-  exit
-end
-filename = ARGV[0]
-
-# Create a new file name for the output
-output_filename = "ref-concordance.csv"
+input_filename = ARGV[0]
+output_filename = ARGV[1]
 
 # refId to phrase
 refs = Hash.new
 
 # Open the original file for reading and the new file for writing
-File.open(filename, 'r') do |file|
+File.open(input_filename, 'r') do |input_file|
   File.open(output_filename, 'w') do |output_file|
-    file.each_line do |line|
+    input_file.each_line do |line|
       # <a href="#B47">Bongard and Levin, 2021</a>
       line.scan(/<a href="#(B\d+)">([^<]+)<\/a>/) do |refId, phrase|
         prior_to_match = $`
@@ -59,4 +52,4 @@ File.open(filename, 'r') do |file|
   end
 end
 
-puts "Done! #{output_filename} generated from #{filename}."
+puts "Done! #{output_filename} generated from #{input_filename}."

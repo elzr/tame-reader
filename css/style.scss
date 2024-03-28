@@ -1,7 +1,9 @@
 body {
+  ul {
+    list-style-type: none;  
+  }
   &.no_cols {
-    ul {
-      list-style-type: none;  
+    ul.p, ul.figure, ul.table {
       width:55%
     }
     li.s {
@@ -14,7 +16,6 @@ body {
     padding-left:0;
 
     ul.p, ul.figure, ul.table {
-      // list-style-type: none;
       margin:4rem 0;
       display: flex;
       align-items: flex-start;
@@ -46,6 +47,18 @@ h1 {
 }
 
 .byline {
+  list-style-type: none;
+  margin-bottom:2em;
   .person {font-weight: bold;}
-  .affiliation {opacity: 80%;}
+  .affiliation {opacity: 80%; margin-left:2em}
+}
+
+.marginnote {
+  width:40%;
+  margin-right:-10%;
+}
+
+h4.marginnote {
+  margin-right:-8%;
+  margin-top:0;
 }

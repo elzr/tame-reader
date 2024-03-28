@@ -1,31 +1,33 @@
 h1. Technological Approach to Mind Everywhere: %(subtitle)An Experimentally-Grounded Framework for Understanding Diverse Bodies and Minds%
 
-<div class="people">
-*(byline).
+ <label for="mn-demo" class="margin-toggle">&#8853;</label>
+ <input type="checkbox" id="mn-demo" class="margin-toggle"/>
+
+h4(marginnote). Written by
+*(byline marginnote).
 *(person) Michael Levin
 *(affiliation) Allen Discovery Center at Tufts University, Medford, MA, United States
 *(affiliation) Wyss Institute for Biologically Inspired Engineering at Harvard University, Cambridge, MA, United States
 
-h4. Edited by
+h4(marginnote). Edited by
 
-*(byline).
+*(byline marginnote).
 *(person) Eva Jablonka
 *(affiliation) Tel Aviv University, Israel
 
-h4. Reviewed by
+h4(marginnote). Reviewed by
 
-*(byline).
+*(byline marginnote).
 *(person) Lars Chittka
 *(affiliation) Queen Mary University of London, United Kingdom
 
-*(byline).
+*(byline marginnote).
 *(person) Patrick McGivern
 *(affiliation) University of Wollongong, Australia
 
-*(byline).
+*(byline marginnote).
 *(person) Louis N. Irwin
 *(affiliation) The University of Texas at El Paso, United States
-</div>
 
 *(p#abstract).
 *(s#abstract_1) Synthetic biology and bioengineering provide the opportunity to create novel embodied cognitive systems (otherwise known as minds) in a very wide variety of chimeric architectures combining evolved and designed material and software.

@@ -1,5 +1,7 @@
-body.no_cols ul {
+body ul {
   list-style-type: none;
+}
+body.no_cols ul.p, body.no_cols ul.figure, body.no_cols ul.table {
   width: 55%;
 }
 body.no_cols li.s {
@@ -40,9 +42,24 @@ h1 .subtitle {
   font-size: 80%;
 }
 
+.byline {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
 .byline .person {
   font-weight: bold;
 }
 .byline .affiliation {
   opacity: 80%;
+  margin-left: 2em;
+}
+
+.marginnote {
+  width: 40%;
+  margin-right: -10%;
+}
+
+h4.marginnote {
+  margin-right: -8%;
+  margin-top: 0;
 }/*# sourceMappingURL=style.css.map */

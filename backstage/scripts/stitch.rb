@@ -13,7 +13,7 @@ File.open(stitch1, 'r') do |stitch1_file|
         gsub(/&#x2014;/, '--').
         gsub(/&#x201C;/, '"').
         gsub(/&#x201D;/, '"').
-        gsub(/\(C\)/i, '== \& ==');
+        gsub(/\(C\)/i, '&lpar;C&rpar;');
           # no formatting https://textile-lang.com/doc/no-textile-processing
           # this prevents textile auto-converting (C) to © https://textile-lang.com/doc/unicode-symbols
         

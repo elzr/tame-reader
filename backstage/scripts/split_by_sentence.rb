@@ -9,8 +9,9 @@ File.open(to_split, 'r') do |file|
       paraId = ''
       sentenceCount = 1
 
-      # ignore table lines since they're already parsed
-      if line =~ /#table-/
+      # split only paragraphs
+      unless line =~ /^\*\((p|figure)#/
+        output_file.write(line)
         next
       end
 

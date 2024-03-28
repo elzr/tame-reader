@@ -1,13 +1,13 @@
 body {
-  ul {
-    list-style-type: none;  
-  }
   &.no_cols {
-    ul.p, ul.figure, ul.table {
+    ul.p, ul.figure, ul.table, ul.box {
       width:55%
     }
-    li.s {
-      display:contents;
+    ul.p, ul.figure {
+      list-style-type: none;  
+      li.s {
+        display:contents;
+      }
     }
   }
 

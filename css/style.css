@@ -1,10 +1,10 @@
-body ul {
-  list-style-type: none;
-}
-body.no_cols ul.p, body.no_cols ul.figure, body.no_cols ul.table {
+body.no_cols ul.p, body.no_cols ul.figure, body.no_cols ul.table, body.no_cols ul.box {
   width: 55%;
 }
-body.no_cols li.s {
+body.no_cols ul.p, body.no_cols ul.figure {
+  list-style-type: none;
+}
+body.no_cols ul.p li.s, body.no_cols ul.figure li.s {
   display: contents;
 }
 body.cols {

@@ -10,7 +10,7 @@ File.open(to_split, 'r') do |file|
       sentenceCount = 1
 
       # split only paragraphs
-      unless line =~ /^\*\((p|figure)#/
+      unless line =~ /^\*\((p|figure|box)#/
         output_file.write(line)
         next
       end

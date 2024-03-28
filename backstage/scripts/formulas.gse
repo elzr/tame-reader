@@ -1,4 +1,8 @@
+
 =IF(LEFT(H4)<>"h", "*("&H4&"#"&G4&") "&A4, H4*". "&A4)
+
+//turn into textile bullet, for tables
+=ArrayFormula("*("&B2:B&"#"&D2:D&")"&(IF(B2:B<>"s","."," ")&A2:A))
 
 
 //turn into textile bullet or headline

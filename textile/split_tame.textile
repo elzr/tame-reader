@@ -1,34 +1,3 @@
-h1. Technological Approach to Mind Everywhere: %(subtitle)An Experimentally-Grounded Framework for Understanding Diverse Bodies and Minds%
-
- <label for="mn-demo" class="margin-toggle">&#8853;</label>
- <input type="checkbox" id="mn-demo" class="margin-toggle"/>
-
-h4(marginnote). Written by
-*(byline marginnote).
-*(person) Michael Levin
-*(affiliation) Allen Discovery Center at Tufts University, Medford, MA, United States
-*(affiliation) Wyss Institute for Biologically Inspired Engineering at Harvard University, Cambridge, MA, United States
-
-h4(marginnote). Edited by
-
-*(byline marginnote).
-*(person) Eva Jablonka
-*(affiliation) Tel Aviv University, Israel
-
-h4(marginnote). Reviewed by
-
-*(byline marginnote).
-*(person) Lars Chittka
-*(affiliation) Queen Mary University of London, United Kingdom
-
-*(byline marginnote).
-*(person) Patrick McGivern
-*(affiliation) University of Wollongong, Australia
-
-*(byline marginnote).
-*(person) Louis N. Irwin
-*(affiliation) The University of Texas at El Paso, United States
-
 *(p#abstract).
 *(s#abstract_1) Synthetic biology and bioengineering provide the opportunity to create novel embodied cognitive systems (otherwise known as minds) in a very wide variety of chimeric architectures combining evolved and designed material and software.
 *(s#abstract_2) These advances are disrupting familiar concepts in the philosophy of mind, and require new ways of thinking about and comparing truly diverse intelligences, whose composition and origin are not like any of the available natural model species.
@@ -410,7 +379,7 @@ h4(box#box-1a). <strong>BOX 1. Stress as the glue of agency.</strong>
 
 h2(#somatic-cognition). Somatic Cognition: An Example of Unconventional Agency in Detail
 
-*(quote#quote-1) “Again and again terms have been used which point not to physical but to psychical analogies.  It was meant to be more than a poetical metaphor…” – <a href="#B337">Spemann (1967)</a>
+bq(quote#quote-1). “Again and again terms have been used which point not to physical but to psychical analogies.  It was meant to be more than a poetical metaphor…” <footer><a href="#B337">Spemann (1967)</a></footer>
 
 *(p#para-50).
 *(s#para-50_1) An example of TAME applied to basal cognition in an unconventional substrate is that of morphogenesis, in which the mechanisms of cognitive binding between subunits are now partially known, and testable hypotheses about cognitive scaling can be formulated [explored in detail in <a href="#B133">Friston et al. (2015a)</a> and <a href="#B274">Pezzulo and Levin (2015</a>, <a href="#B275">2016)</a>].

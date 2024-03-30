@@ -1,20 +1,13 @@
 body {
-  &.no_cols {
-    ul.p, ul.figure, ul.table, ul.box {
-      width:55%
-    }
-    ul.p, ul.figure {
-      list-style-type: none;  
-      li.s {
-        display:contents;
-      }
+  padding-left:0;
+  ul.p, ul.figure, ul.table {
+    list-style-type: none;  
+    li.s {
+      display:contents;
     }
   }
 
-  &.cols {
-    max-width:100%;
-    padding-left:0;
-
+  &.col2, &.col3 {
     ul.p, ul.figure, ul.table {
       margin:4rem 0;
       display: flex;
@@ -24,21 +17,50 @@ body {
       flex-wrap: wrap;
       flex-direction: column;
       text-align: left;
-      height: 45rem;
       overflow: hidden;
       border-top: 3px solid #303030;
+      
+      padding-left:0;
+      padding-top:1rem;
+
+      li.s {
+        display: block;
+        width:30rem;
+        // border-left: 1px solid #303030;
+        padding-bottom: 1.5rem;
+        padding-left: 0;
+        margin-right: 4rem;
+      }  
     }
-    
-    li.s {
-      display: block;
-      width: 30rem;
-      margin-left: 3rem;
-      border-left: 1px solid #303030;
-      padding-left: 2rem;
-      padding-top: 1.5rem;
-    }  
+  }
+  &.col1 {
+    #col1 {font-weight:bold; background-color:hotpink}
+    ul.p, ul.figure, ul.table, ul.box {
+      max-width:55rem;
+    }
+  }
+  &.col2 {
+    #col2 {font-weight:bold; background-color:hotpink}
+    ul.p, ul.figure, ul.table, ul.box {
+      max-width: 80rem;
+      height: 60rem;
+    }
+  }
+  &.col3 {
+    #col3 {font-weight:bold; background-color:hotpink}
+    ul.p, ul.figure, ul.table, ul.box {
+      max-width: 110rem;
+      height: 45rem;
+    }
   }
 }
+
+.tools {
+  text-align:center;
+  font-family: sans-serif;
+  font-weight:120%;
+}
+div.byline {display:none}
 
 h1 {
   width:70%;

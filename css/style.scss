@@ -5,12 +5,17 @@ body {
     label {
       position:absolute;
       right:0;
-      top:-3.5rem;
+      top:-2rem;
       opacity:0.5;
       text-align:right;
       line-height:1;
+      a {background:none !important}
       small {
         opacity:0.8;
+        display:none;
+      }
+      &:hover {
+        small {display:inline}
       }
     }
   }
@@ -23,7 +28,8 @@ body {
 
   &.col2, &.col3 {
     ul.p, ul.figure, ul.table {
-      margin-top:4rem;
+      margin-top:2rem;
+      margin-bottom:3rem;
       display: flex;
       align-items: flex-start;
       align-content: flex-start;
@@ -34,8 +40,8 @@ body {
       // overflow: hidden;
       border-top: 3px solid #303030;
       
-      padding-left:0;
-      // padding-top:1rem;
+      padding-left:3rem;
+      padding-top:1rem;
 
       li.s {
         display: block;
@@ -47,6 +53,10 @@ body {
         margin-top:0;
       }  
     }
+    ul.figure, ul.table {
+      overflow-x: hidden;
+      overflow-y:visible;
+    }
   }
   &.col1 {
     #col1 {font-weight:bold; background-color:hotpink}
@@ -56,15 +66,15 @@ body {
   }
   &.col2 {
     #col2 {font-weight:bold; background-color:hotpink}
+    max-width: 67rem;
     ul.p, ul.figure, ul.table, ul.box {
-      max-width: 80rem;
       height: 60rem;
     }
   }
   &.col3 {
     #col3 {font-weight:bold; background-color:hotpink}
+    max-width: 110rem;
     ul.p, ul.figure, ul.table, ul.box {
-      max-width: 110rem;
       height: 45rem;
     }
   }
@@ -85,6 +95,9 @@ h1 {
   width:70%;
   line-height: 1.2;
   .subtitle {display:block; font-size:80%}
+}
+h1, h2, h3 {
+  margin-left:-3rem;
 }
 
 // ul.p {background-color:#333}

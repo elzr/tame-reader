@@ -31,7 +31,7 @@ let R = {
         ul.data({char: charCount, word: wordCount, line: lineCount});
         ul.append(
           `<label id="${ul_id}">`+
-            `<a href="#${ul_id}">#${ul_id}</a><br />`+
+            `<a href="#${ul_id}">#${ul_id}</a> `+
             '<small>'+
               `${charCount} chars, ${wordCount} words, ${lineCount} lines`+
             '</small>'+
@@ -67,10 +67,10 @@ let R = {
         const li = ul.data('li');
         const ul_height = ul.height();
         ul.height( (li.sum[0] + li.next)+'px' );
-        console.log(
-          {ul_id, ul_height, scrollWidth: ul.prop('scrollWidth'), 
-          innerWidth: ul.innerWidth(),
-          li });
+        // console.log(
+        //   {ul_id, ul_height, scrollWidth: ul.prop('scrollWidth'), 
+        //   innerWidth: ul.innerWidth(),
+        //   li });
       }
     },
     trimmer: (ul)=>{
@@ -80,7 +80,8 @@ let R = {
         sum: [0,0,0],
         sum_max: 0,
         col: 0,
-        next: 0,
+        next: 0, // almost li for the first column
+        prev: 0, //last li of the first column
         count: 0
       };
       ul.find('li').each( function() {
@@ -93,6 +94,7 @@ let R = {
         if ( (li.sum[li.col] + li.h[i] + 2) > ul_h) {
           if(li.col == 0) {
             li.next = li.h[i];
+            li.prev = li.h[i-1];
             // console.log({li_next});
           }
           li.col ++;
@@ -101,8 +103,14 @@ let R = {
         li.count++;
       }
       li.sum_max = Math.max(...li.sum);
+      if( li.sum_max - li.sum[1] > li.prev) {
+        console.log( {ul_id, ul_h, li} );
+        if((li.sum[1] + li.prev) < (li.sum[0] - li.prev)) {
+          li.sum_max = li.sum[0] - li.prev;
+        }
+      }
       ul.data('li', li);
-      console.log( {ul_id, ul_h, li} );
+      // console.log( {ul_id, ul_h, li} );
       ul.height((li.sum_max + 5) + 'px');
     }
   },

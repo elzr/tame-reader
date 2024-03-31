@@ -7,13 +7,20 @@ body ul {
 body ul label {
   position: absolute;
   right: 0;
-  top: -3.5rem;
+  top: -2rem;
   opacity: 0.5;
   text-align: right;
   line-height: 1;
 }
+body ul label a {
+  background: none !important;
+}
 body ul label small {
   opacity: 0.8;
+  display: none;
+}
+body ul label:hover small {
+  display: inline;
 }
 body ul.p, body ul.figure, body ul.table {
   list-style-type: none;
@@ -22,7 +29,8 @@ body ul.p li.s, body ul.figure li.s, body ul.table li.s {
   display: contents;
 }
 body.col2 ul.p, body.col2 ul.figure, body.col2 ul.table, body.col3 ul.p, body.col3 ul.figure, body.col3 ul.table {
-  margin-top: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
@@ -31,7 +39,8 @@ body.col2 ul.p, body.col2 ul.figure, body.col2 ul.table, body.col3 ul.p, body.co
   flex-direction: column;
   text-align: left;
   border-top: 3px solid #303030;
-  padding-left: 0;
+  padding-left: 3rem;
+  padding-top: 1rem;
 }
 body.col2 ul.p li.s, body.col2 ul.figure li.s, body.col2 ul.table li.s, body.col3 ul.p li.s, body.col3 ul.figure li.s, body.col3 ul.table li.s {
   display: block;
@@ -41,6 +50,10 @@ body.col2 ul.p li.s, body.col2 ul.figure li.s, body.col2 ul.table li.s, body.col
   margin-right: 4rem;
   margin-top: 0;
 }
+body.col2 ul.figure, body.col2 ul.table, body.col3 ul.figure, body.col3 ul.table {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
 body.col1 #col1 {
   font-weight: bold;
   background-color: hotpink;
@@ -48,20 +61,24 @@ body.col1 #col1 {
 body.col1 ul.p, body.col1 ul.figure, body.col1 ul.table, body.col1 ul.box {
   max-width: 55rem;
 }
+body.col2 {
+  max-width: 67rem;
+}
 body.col2 #col2 {
   font-weight: bold;
   background-color: hotpink;
 }
 body.col2 ul.p, body.col2 ul.figure, body.col2 ul.table, body.col2 ul.box {
-  max-width: 80rem;
   height: 60rem;
+}
+body.col3 {
+  max-width: 110rem;
 }
 body.col3 #col3 {
   font-weight: bold;
   background-color: hotpink;
 }
 body.col3 ul.p, body.col3 ul.figure, body.col3 ul.table, body.col3 ul.box {
-  max-width: 110rem;
   height: 45rem;
 }
 
@@ -86,6 +103,10 @@ h1 {
 h1 .subtitle {
   display: block;
   font-size: 80%;
+}
+
+h1, h2, h3 {
+  margin-left: -3rem;
 }
 
 .byline {

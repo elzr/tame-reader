@@ -31,7 +31,7 @@ File.open(to_format, 'r') do |file|
       dash_dash = brackets.gsub(/—([^—]+)—/) do
         " <span class=\"paren\">#{$&}</span> "
       end
-      dash_end = dash_dash.gsub(/—([^—<]+)(\.|\?|\.\")/) do
+      dash_end = dash_dash.gsub(/—([^—<]+)(\.\"|\.|\?)/) do
         " <span class=\"paren\">#{$&}</span> "
       end
       

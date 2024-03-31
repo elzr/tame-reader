@@ -1,5 +1,14 @@
 body {
   padding-left:0;
+  ul {
+    position:relative;
+    label {
+      position:absolute;
+      right:0;
+      top:-2.5rem;
+      opacity:0.5;
+    }
+  }
   ul.p, ul.figure, ul.table {
     list-style-type: none;  
     li.s {
@@ -17,7 +26,7 @@ body {
       flex-wrap: wrap;
       flex-direction: column;
       text-align: left;
-      overflow: hidden;
+      // overflow: hidden;
       border-top: 3px solid #303030;
       
       padding-left:0;
@@ -55,6 +64,10 @@ body {
   }
 }
 
+.paren {
+  opacity:0.6;
+}
+
 .tools {
   text-align:center;
   font-family: sans-serif;
@@ -67,6 +80,8 @@ h1 {
   line-height: 1.2;
   .subtitle {display:block; font-size:80%}
 }
+
+ul.p {background-color:#333}
 
 .byline {
   list-style-type: none;

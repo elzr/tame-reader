@@ -23,17 +23,17 @@ File.open(to_split, 'r') do |file|
         "#{$&}.\n*(s##{paraId}_1)"
       end
       
-      # Replace every ". " with ". \n" and write to the new file
-      modified_line = line.gsub(/\. +/) do
+      # Replace every ". " (or "? "") with ". \n" and write to the new file
+      modified_line = line.gsub(/(\.|\?) +/) do
+        end_symbol = $1
         prior_to_match = $`
-        if prior_to_match =~ /((\))|(vs)|( al)|([A-Z]))$/
-          next ". "
+
+        if prior_to_match =~ /((vs)|( al)|([A-Z]))$/
+          next "#{end_symbol} "
         end
-        ".\n*(s##{paraId}_#{sentenceCount+=1}) "
+        "#{end_symbol}\n*(s##{paraId}_#{sentenceCount+=1}) "
       end
       output_file.write(modified_line)
     end
   end
 end
-
-puts "Done! #{to_split}'s paragraphs broken by sentence in #{output_filename}."

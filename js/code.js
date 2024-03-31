@@ -31,7 +31,7 @@ let R = {
         ul.data({char: charCount, word: wordCount, line: lineCount});
         ul.append(
           `<label id="${ul_id}">`+
-            `${ul_id}<br />`+
+            `<a href="#${ul_id}">#${ul_id}</a><br />`+
             '<small>'+
               `${charCount} chars, ${wordCount} words, ${lineCount} lines`+
             '</small>'+
@@ -40,43 +40,70 @@ let R = {
         R.para.balancer(charCount, ul);
       });
     },
-    balancer: function(charCount, ul) {
+    balancer: (charCount, ul) => {
       let height = 60;
-        
-      if( charCount < 1510 ) {
-        height = 45;
-        if( charCount < 1000 ) {
-          height = 30;
+      if( charCount < 1750 ) {  
+        height = 50;
+        if( charCount < 1500 ) {
+          height = 45;
+          if( charCount < 1250 ) {
+            height = 40;
+            if( charCount < 1000 ) {
+              height = 30;
+            }
+          }
         }
       }
 
       ul.css('height', `${height}rem`);
-      setTimeout(() => {
+      setTimeout( function() {
         R.para.trimmer(ul);
-      }, 500);
+        R.para.checker(ul);
+      }, 200);
+    },
+    checker: (ul) => {
+      const ul_id = ul.attr('id');
+      if( ul.prop('scrollWidth') > ul.innerWidth() ) {
+        const li = ul.data('li');
+        const ul_height = ul.height();
+        ul.height( (li.sum[0] + li.next)+'px' );
+        console.log(
+          {ul_id, ul_height, scrollWidth: ul.prop('scrollWidth'), 
+          innerWidth: ul.innerWidth(),
+          li });
+      }
     },
     trimmer: (ul)=>{
       const ul_h = ul.innerHeight();
-      let li_h = [];
+      let li={
+        h:[],
+        sum: [0,0,0],
+        sum_max: 0,
+        col: 0,
+        next: 0,
+        count: 0
+      };
       ul.find('li').each( function() {
-        li_h.push( $(this).outerHeight() );
+        li.h.push( $(this).outerHeight() );
       });
 
       const ul_id = ul.attr('id');
-      let li_sum = [0,0,0];
-      let li_col = 0;
-      let li_count = 0;
-      for (let i = 0; i < li_h.length; i++) {
+      for (let i = 0; i < li.h.length; i++) {
         // the +2 is there for fudging
-        if ( (li_sum[li_col] + li_h[i] + 2) > ul_h) {
-          li_col ++;
+        if ( (li.sum[li.col] + li.h[i] + 2) > ul_h) {
+          if(li.col == 0) {
+            li.next = li.h[i];
+            // console.log({li_next});
+          }
+          li.col ++;
         }
-        li_sum[li_col] += li_h[i];
-        li_count++;
+        li.sum[li.col] += li.h[i];
+        li.count++;
       }
-      const li_sum_max = Math.max(...li_sum);
-      console.log( {ul_id, ul_h, li_h, li_sum_max, li_sum, li_count} );
-      ul.height((li_sum_max + 5) + 'px');
+      li.sum_max = Math.max(...li.sum);
+      ul.data('li', li);
+      console.log( {ul_id, ul_h, li} );
+      ul.height((li.sum_max + 5) + 'px');
     }
   },
   theme:{ // dark/light theme

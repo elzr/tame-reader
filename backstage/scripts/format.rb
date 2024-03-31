@@ -21,7 +21,7 @@ File.open(to_format, 'r') do |file|
         elsif inside_parens =~ /^[A-Z\d,'′’–]+$/ # (A) or (A,C)
           next match
         else
-          extra = after_match =~ /\—|\]/ ? ' ' : ''
+          extra = after_match =~ /\-|\—|\]/ ? ' ' : ''
           "%(paren)(#{inside_parens})%"+extra
         end
       end

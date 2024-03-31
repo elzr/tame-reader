@@ -10,10 +10,10 @@ h2(#intro). Introduction
 
 *(table#table-1).
 *(s#table-1_1) <strong>TABLE 1.</strong> The core tenets of TAME.
-*(s#table-1_2) Continuum of cognitive capacities - no binary categories, no bright line separating true cognition from "just physics," as is clear from evolutionary process and ability to bioengineer chimeras between any two "natural kinds."
+*(s#table-1_2) Continuum of cognitive capacities — no binary categories, no bright line separating true cognition from "just physics," as is clear from evolutionary process and ability to bioengineer chimeras between any two "natural kinds."
 *(s#table-1_3) Mature frameworks must apply to truly diverse intelligences — beyond the examples from Earth's phylogenetic tree based on brains, we must be able to consider and compare agents across the option space of designed and evolved combinations of living, non-living, and software components at all scales.
 *(s#table-1_4) Selves exist across a continuum of persuadability, and it is an empirical question as to where on this axis any given system lies (revealed by the ratio of prediction and control vs. effort and knowledge that needs to be input, for any given way of relating to that system).
-*(s#table-1_5) Selves are not fixed, permanent agents - their substrate can remodel radically during their lifetime; the owner of memories and preferences, and the subject that interprets rewards and punishments, is malleable and plastic.
+*(s#table-1_5) Selves are not fixed, permanent agents — their substrate can remodel radically during their lifetime; the owner of memories and preferences, and the subject that interprets rewards and punishments, is malleable and plastic.
 *(s#table-1_6) The core of being a Self is the ability to pursue goals. Selves can be nested and overlapping, cooperating and competing both laterally and across levels.  Each higher-level self deforms the option space for the lower level Selves, enabling them to follow energy minimization to achieve outcomes that look inevitable and simple at one scale, while serving intelligent goals at a higher scale.
 *(s#table-1_7) Intelligence is the degree of competency of navigating any space (not just the familiar 3D space of motility), including morphospace, transcriptional space, physiological space, etc., toward desirable regions, while avoiding being trapped in local minima. Estimates of intelligence of any system are observer-dependent, and say as much about the observer and their limitations as they do about the system itself.
 

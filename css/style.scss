@@ -5,8 +5,13 @@ body {
     label {
       position:absolute;
       right:0;
-      top:-2.5rem;
+      top:-3.5rem;
       opacity:0.5;
+      text-align:right;
+      line-height:1;
+      small {
+        opacity:0.8;
+      }
     }
   }
   ul.p, ul.figure, ul.table {
@@ -18,7 +23,7 @@ body {
 
   &.col2, &.col3 {
     ul.p, ul.figure, ul.table {
-      margin:4rem 0;
+      margin-top:4rem;
       display: flex;
       align-items: flex-start;
       align-content: flex-start;
@@ -30,7 +35,7 @@ body {
       border-top: 3px solid #303030;
       
       padding-left:0;
-      padding-top:1rem;
+      // padding-top:1rem;
 
       li.s {
         display: block;
@@ -39,6 +44,7 @@ body {
         padding-bottom: 1.5rem;
         padding-left: 0;
         margin-right: 4rem;
+        margin-top:0;
       }  
     }
   }

@@ -7,8 +7,13 @@ body ul {
 body ul label {
   position: absolute;
   right: 0;
-  top: -2.5rem;
+  top: -3.5rem;
   opacity: 0.5;
+  text-align: right;
+  line-height: 1;
+}
+body ul label small {
+  opacity: 0.8;
 }
 body ul.p, body ul.figure, body ul.table {
   list-style-type: none;
@@ -17,7 +22,7 @@ body ul.p li.s, body ul.figure li.s, body ul.table li.s {
   display: contents;
 }
 body.col2 ul.p, body.col2 ul.figure, body.col2 ul.table, body.col3 ul.p, body.col3 ul.figure, body.col3 ul.table {
-  margin: 4rem 0;
+  margin-top: 4rem;
   display: flex;
   align-items: flex-start;
   align-content: flex-start;
@@ -27,7 +32,6 @@ body.col2 ul.p, body.col2 ul.figure, body.col2 ul.table, body.col3 ul.p, body.co
   text-align: left;
   border-top: 3px solid #303030;
   padding-left: 0;
-  padding-top: 1rem;
 }
 body.col2 ul.p li.s, body.col2 ul.figure li.s, body.col2 ul.table li.s, body.col3 ul.p li.s, body.col3 ul.figure li.s, body.col3 ul.table li.s {
   display: block;
@@ -35,6 +39,7 @@ body.col2 ul.p li.s, body.col2 ul.figure li.s, body.col2 ul.table li.s, body.col
   padding-bottom: 1.5rem;
   padding-left: 0;
   margin-right: 4rem;
+  margin-top: 0;
 }
 body.col1 #col1 {
   font-weight: bold;

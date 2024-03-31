@@ -15,7 +15,10 @@ File.open(to_format, 'r') do |file|
 
         # escape %'s so that the textile span doesn't get confused
         inside_parens = inside_parens.gsub(/\%/, '&#37;')
-        if inside_parens =~ /^[A-Z\d,'′’–]+$/ # (A) or (A,C)
+
+        if prior_to_match =~ /<a[^>\/]+>[^<]*$/ # inside a link
+          next match
+        elsif inside_parens =~ /^[A-Z\d,'′’–]+$/ # (A) or (A,C)
           next match
         else
           extra = after_match =~ /\—|\]/ ? ' ' : ''
@@ -28,7 +31,7 @@ File.open(to_format, 'r') do |file|
       dash_dash = brackets.gsub(/—([^—]+)—/) do
         " <span class=\"paren\">#{$&}</span> "
       end
-      dash_end = dash_dash.gsub(/—([^—<]+)(\.|\?)/) do
+      dash_end = dash_dash.gsub(/—([^—<]+)(\.|\?|\.\")/) do
         " <span class=\"paren\">#{$&}</span> "
       end
       
